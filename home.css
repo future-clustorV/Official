@@ -1,0 +1,33 @@
+
+#top{
+    position: relative;
+    height: 870px;
+    overflow: hidden;
+}
+#topTextTitle{
+    margin: auto;
+    font-size: 150px;
+    color: rgb(168 242 255);
+    text-shadow: 10px 10px #e4d9ff;
+}
+.topText{
+    margin: auto;
+}
+.topText h2{
+    color: white;
+    text-shadow: 2px 2px black;
+}
+#topBackgroundImage{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -5;
+}
+#groupTwitter{
+    width: 1200px;
+    height: 1500px;
+    overflow: scroll;
+    margin: auto;
+    margin-top: 100px;
+}

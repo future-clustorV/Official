@@ -1,0 +1,46 @@
+#mainContainer{
+    display: grid;
+    grid-template-columns: 6fr 5fr;
+}
+
+#infoImagesContainer{
+    display: grid;
+    justify-content: end;
+}
+#standImageContainer{
+    max-width: 2000px;
+}
+#infoImage{
+    width: 100%;
+    filter: drop-shadow(15px 10px 0px gray);
+}
+
+#infoTextsContainer{
+    display: grid;
+    justify-content: start;
+    max-width: 800px;
+    grid-template-rows: 250px 800px;
+}
+#introductionTextsContainer{
+    display: grid;
+    grid-template-rows: 200px 1fr;
+    width: 750px;
+    justify-content: center;
+    border: solid 3px black;
+    border-radius: 10px;
+    grid-row: 2;
+}
+#nameBox{
+    text-align: center;
+    height: 100%;
+    display: grid;
+    align-content: center;
+}
+#nameBox h1{
+    font-size: 100px;
+    margin: auto;
+}
+#introductionBox h5{
+    font-size: 30px;
+    margin: 0;
+}
