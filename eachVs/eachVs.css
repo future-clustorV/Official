@@ -19,12 +19,14 @@
     display: grid;
     justify-content: start;
     max-width: 800px;
-    grid-template-rows: 250px 800px;
+    grid-template-rows: 200px 1fr 880px;
 }
 #introductionTextsContainer{
-    display: grid;
-    grid-template-rows: 200px 1fr;
-    width: 750px;
+    grid-template-rows: 1fr;
+    min-width: 600px;
+    max-width: 750px;
+    height: 100%;
+    min-height: 300px;
     justify-content: center;
     border: solid 3px black;
     border-radius: 10px;
@@ -32,15 +34,22 @@
 }
 #nameBox{
     text-align: center;
-    height: 100%;
-    display: grid;
     align-content: center;
 }
 #nameBox h1{
-    font-size: 100px;
+    font-size: 80px;
     margin: auto;
+}
+#introductionBox{
+    min-height: 300px;
+    display: grid;
+    align-items: center;
 }
 #introductionBox h5{
     font-size: 30px;
     margin: 0;
+}
+#twitterContainer{
+    grid-row: 3;
+    margin-top: 20px;
 }

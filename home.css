@@ -25,7 +25,9 @@
     z-index: -5;
 }
 #groupTwitter{
-    width: 1200px;
+    max-width: 1200px;
+    min-width: 300px;
+    width: 70%;
     height: 1500px;
     overflow: scroll;
     margin: auto;
