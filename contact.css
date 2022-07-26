@@ -3,3 +3,14 @@
   width: 100%;
   justify-content: center;
 }
+
+#form{
+  width: 650px;
+  height: 1300px; 
+}
+@media screen and (max-width:480px) {
+  #form{
+    width: 340px;
+    height: 1500px;
+  }
+}

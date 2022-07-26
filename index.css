@@ -6,23 +6,32 @@ body {
     display: grid;
     grid-template-columns: 1fr 2fr;
     position: fixed;
-    background-color: white;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 10;
 }
+#topMiniItems{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: white;
+}
 #headerTopImageBox{
     text-align: left;
+    background-color: white;
 }
 #headerTopImg{
     width: 100px;
     margin: 10px;
     margin-left: 30px;
 }
+#headerHamburger{
+    display: none;
+}
 #headerLinks{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    background-color: white;
 }
 
 .headerLink{
@@ -40,7 +49,7 @@ body {
 .headerLink::after {
     position: absolute;
     left: 0;
-    bottom: 0;
+    top: 45px;
     transform: translate(0px, 4px);
     content: '';
     width: 100%;
@@ -65,7 +74,7 @@ body {
     transform: rotate(0deg);
     transition: 0.3s;
 }
-#headerVs:hover .eachVsButton{
+#headerVs.active .eachVsButton{
     transform: rotate(-90deg);
 }
 .eachVsTable{
@@ -80,7 +89,7 @@ body {
     opacity: 0;
     transform: translate(0px, -5px);
 }
-#headerVs:hover .eachVsTable{
+#headerVs.active .eachVsTable{
     display: block;
 
     height: 190px;
@@ -168,3 +177,104 @@ body {
 #background img{
     width: 50%;
 }
+
+@media screen and (max-width:480px) {
+    #header{
+        grid-template-columns: none;
+        grid-template-rows: 60px 1fr;
+    }
+    #headerTopImg{
+        width: 80px;
+        margin: 5px;
+        margin-left: 30px;
+    }
+    #headerHamburger{
+        display: block;
+        margin: auto;
+        margin-right: 10px;
+    }
+    #headerLinks{
+        grid-template-rows: min-content 1fr;;
+        grid-template-columns: 1fr;
+        height: 0px;
+        transition-duration: 1s;
+        overflow: auto;
+    }
+    #header.active #headerLinks{
+        height: 100%;
+        margin-bottom: 10px;
+    }
+	.headerLink {
+		display: none;
+	}
+	#header.active .headerLink {
+		display: block;
+	}
+    #mainContainer{
+        margin-top: 60px;
+    }  
+    .pageTitle{
+        font-size: 40px;
+    }
+    .pageTitle::after{
+        transform: translate(-50%, -5px);
+        width: 130px;
+        height: 4px;
+    }
+    .eachVsTable{
+        position: static;
+    }
+}
+
+#menu-btn{
+    display: none;
+}
+
+.navicon {
+    background: #ddd;
+    display: block;
+    height: 3px;
+    width: 26px;
+    position: relative;
+    transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+  }
+  
+  .navicon:before,
+  .navicon:after {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: #ddd;
+    transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+  }
+  
+  .navicon:before {
+    top: 9px;
+  }
+  
+  .navicon:after {
+    bottom: 9px;
+  }
+  
+  /* Hamburger Menu Animation Start */
+  #header.active .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  #header.active .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+  #header.active .menu-icon:not(.steps) .navicon:before {
+    top: 0;
+  }
+  #header.active .menu-icon:not(.steps) .navicon:after {
+    bottom: 0;
+  }
+  
+  #header.active .menu-icon .navicon {
+    background: rgba(0, 0, 0, 0);
+    transition: 0.2192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+  }

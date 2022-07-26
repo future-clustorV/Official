@@ -11,10 +11,15 @@
 </head>
 <body>
     <div id="header">
-        <div id="headerTopImageBox">
-            <a href="../home.html"><img id="headerTopImg" src="../images/group-logo.png"></img></a>
-        </div>
-        <div id="headerLinks">
+        <div id="topMiniItems">
+            <div id="headerTopImageBox">
+                <a href="../home.html"><img id="headerTopImg" src="../images/group-logo.png"></img></a>
+            </div>
+            <div id="headerHamburger">
+                <input type="checkbox" class="menu-btn" id="menu-btn">
+                <label for="menu-btn" class="menu-icon"><span class="navicon"></span></label>
+            </div>
+        </div>    <div id="headerLinks">
             <div class="headerLink"><a href="../home.html">AboutUs</a></div>
             <div class="headerLink active" id="headerVs">
                 <div class="headerVsText"><a href="../vtubers.html">Vtuberes</a><div class="eachVsButton">◀</div></div>
@@ -62,5 +67,7 @@
     <div id="background">
         <img src="../images/group-logo.png"></img>
     </div>
+
+    <script src="../index.js"></script>
 </body>
 </html>

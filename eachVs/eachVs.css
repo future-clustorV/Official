@@ -19,7 +19,7 @@
     display: grid;
     justify-content: start;
     max-width: 800px;
-    grid-template-rows: 200px 1fr 880px;
+    grid-template-rows: 50px 1fr 880px;
 }
 #introductionTextsContainer{
     grid-template-rows: 1fr;
@@ -52,4 +52,29 @@
 #twitterContainer{
     grid-row: 3;
     margin-top: 20px;
+}
+
+@media screen and (max-width:480px) {
+    #mainContainer{
+        grid-template-columns: none;
+        grid-template-rows: 1fr;
+    }
+    #infoTextsContainer{
+        grid-template-columns: none;
+        grid-template-rows: 20px 1fr 500px;
+    }
+
+    #infoImage{
+        filter: drop-shadow(10px 5px 0px gray);
+    }
+
+    #introductionTextsContainer{
+        min-width: 90%;
+    }
+    #nameBox h1{
+        font-size: 40px;
+    }
+    #introductionBox h5{
+        font-size: 25px;
+    }
 }
