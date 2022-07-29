@@ -1,0 +1,22 @@
+.guidlineText{
+  font-size: 25px;
+  width: 90%;
+  margin: auto;
+  max-width: 1000px;
+}
+.guidlineText p{
+  margin: 15px;
+}
+
+@media screen and (max-width:480px) {
+  .guidlineTitle{
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  .guidlineText{
+    font-size: 15px;
+  }
+  .guidlineText p{
+    margin: 8px;
+  }
+}

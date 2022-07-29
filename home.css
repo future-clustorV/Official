@@ -39,9 +39,30 @@
         height: 570px;
     }
     #topTextTitle{
-        font-size: 100px;
+        font-size: 80px;
     }
     #topBackgroundImage{
         height: 570px;
+    }
+
+    .topText h2{
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width:600px) {
+    #topTextTitle{
+        font-size: 100px;
+    }
+    .topText h2{
+        font-size: 35px;
+    }
+}
+@media screen and (min-width:1400px) {
+    #topTextTitle{
+        font-size: 150px;
+    }
+    .topText h2{
+        font-size: 55px;
     }
 }
