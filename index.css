@@ -214,7 +214,8 @@ body {
         margin-top: 60px;
     }  
     .pageTitle{
-        font-size: 40px;
+        font-size: 35px;
+        width: 100%;
     }
     .pageTitle::after{
         transform: translate(-50%, -5px);
